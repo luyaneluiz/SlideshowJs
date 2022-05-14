@@ -1,0 +1,146 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(90deg, rgba(31, 38, 31, 0.867), #152c75);
+  display: flex;
+  justify-content: center;
+}
+
+.button {
+  width: 40vw;
+  position: absolute;
+}
+
+button {
+  position: absolute;
+  right: 2px;
+  top: 10vh;
+  padding: 7px 10px;
+  border-radius: 10px;
+  border: none;
+  font-weight: 500;
+  color: #fff;
+  background: linear-gradient(50deg, rgb(56, 68, 54), #146066);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background: linear-gradient(90deg, rgb(60, 86, 60), #0c7d83);
+}
+
+main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: black;
+  width: 40vw;
+  height: 60vh;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 15px;
+  box-shadow: 8px 8px 5px 0 rgba(0, 0, 0, 0.39);
+}
+
+.container {
+  display: flex;
+  width: 40vw;
+  height: 60vh;
+  position: absolute;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.img,
+img {
+  width: 40vw;
+  height: 60vh;
+  border-radius: 15px;
+  transition: all 1s;
+}
+
+.img:first-child {
+  margin-left: -100%;
+}
+
+.action-btn {
+  font: bold 30px sans-serif;
+  z-index: 1;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  user-select: none;
+  padding: 7px;
+  color: #00000000;
+}
+
+.action-btn#prev {
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+
+.action-btn#next {
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+.action-btn:hover {
+  color: white;
+  background-color: rgba(20, 19, 19, 0.629);
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+@media (max-width: 900px) {
+  main,
+  .button,
+  .container,
+  .img,
+  img {
+    width: 350px;
+  }
+}
+
+@media (max-width: 500px) {
+  main,
+  .container,
+  .img,
+  img {
+    width: 350px;
+    height: 350px;
+  }
+
+  .button {
+    width: 350px;
+  }
+
+  .action-btn {
+    height: 350px;
+  }
+}
+
+@media (max-width: 400px) {
+  main,
+  .container,
+  .img,
+  img {
+    width: 250px;
+    height: 300px;
+  }
+
+  .button {
+    width: 250px;
+  }
+
+  .action-btn {
+    height: 300px;
+  }
+}
